@@ -53,7 +53,14 @@ type EthAPI struct {
 }
 
 func NewEthAPI(b Backend) *EthAPI {
-	return &EthAPI{b: b}
+	return &EthAPI{
+		b: b,
+	}
+}
+
+// Backend returns the backend interface for use by wrappers
+func (api *EthAPI) Backend() Backend {
+	return api.b
 }
 
 // Chain

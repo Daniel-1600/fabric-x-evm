@@ -35,6 +35,9 @@ type Gateway struct {
 
 	Committer   common.ClientConfig `mapstructure:"committer" yaml:"committer"`
 	SyncTimeout time.Duration       `mapstructure:"sync-timemout" yaml:"sync-timeout"`
+
+	TestAccountsPath string `mapstructure:"test-accounts-path" yaml:"test-accounts-path"` // Path to JSON file with test accounts for eth_accounts RPC
+	EnableTestRPC    bool   `mapstructure:"enable-test-rpc" yaml:"enable-test-rpc"`       // Enable test-only RPC methods (eth_accounts, eth_sendTransaction) - UNSAFE for production
 }
 
 // Orderer contains configuration for an orderer node.

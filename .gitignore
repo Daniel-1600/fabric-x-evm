@@ -9,5 +9,6 @@ testdata/*
 !testdata/fxconfig.yaml
 !testdata/tether_txs.json
 !testdata/alloc_tether_replay.json
+!testdata/test_accounts.json
 *.un~
 *.swp
